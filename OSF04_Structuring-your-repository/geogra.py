@@ -21,6 +21,7 @@ def extract_features(**opts):
     spellbook = SpellBook.read_json(opts["spellbook"])
     output_df = spellbook.cast(input_df)
     output_df.to_csv(opts["output"], index=False)
+    print(output_df)
 
 
 if __name__ == "__main__":
