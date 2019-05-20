@@ -1,5 +1,6 @@
 # OSF04: Structuring your repository
 
+[![Powerpoint Badge](https://img.shields.io/badge/view-powerpoint-orange.svg)](https://docs.google.com/presentation/d/1KscwY9yoPCuN6jKXE2VN2s1tyalssFXJZkHj_ql7r4I/edit?usp=sharing)
 
 In this workshop, we will learn about a good open-source repository structure
 by creating a simple command-line application. 
