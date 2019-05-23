@@ -22,15 +22,16 @@ def run_pipeline():
     # Inputs:
     #         X_train (numpy.ndarray), input images for training
     #         y_train (numpy.ndarray), input labels for training
+    #         C (float), C value for SVM default is 1.0
     #         gamma (float), gamma value for SVM default is 0.001
     # Output:
     #         model, the trained model
     #         float, the training accuracy score
-    classifier = svm.SVC(gamma=0.001)
+    classifier = svm.SVC(C=1, gamma=0.001)
     classifier.fit(X_train, y_train)
     train_preds = classifier.predict(X_train)
     train_score = metrics.accuracy_score(y_train, train_preds)
-    print("Training accuracy score {}".format(train_score))
+    print("Training accuracy score {:.3f}".format(train_score))
 
     # Step 3
     # Predict and evaluate the model
@@ -43,7 +44,7 @@ def run_pipeline():
     #         float, the accuracy score
     test_preds = classifier.predict(X_test)
     test_score = metrics.accuracy_score(y_test, test_preds)
-    print("Test accuracy score {}".format(test_score))
+    print("Test accuracy score {:.3f}".format(test_score))
 
     return train_score, test_score
 
