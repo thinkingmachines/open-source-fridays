@@ -24,10 +24,11 @@ certainly help) as we go through these workshops, so feel free to join along!
 Found any bugs or documentation errors? Want to improve OSF's content? Then
 open up a [Pull
 Request](https://help.github.com/en/articles/creating-a-pull-request)! If you
-don't know how to? Then check our first OSF topic!
+don't know how to, then check our first OSF topic!
 
-If you have any questions, then feel free to post on our #opensource Slack
-channel, or just approach [@ljvmiranda921](https://github.com/ljvmiranda921),
+Lastly, if you have any questions, then feel free to post on our #opensource
+Slack channel, or just approach
+[@ljvmiranda921](https://github.com/ljvmiranda921),
 [@marksteve](https://github.com/marksteve), or
 [@jgtiu](https://github.com/jgtiu)!
 
