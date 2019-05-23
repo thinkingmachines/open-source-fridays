@@ -25,7 +25,7 @@ def run_pipeline():
     #         C (float), C value for SVM default is 1.0
     #         gamma (float), gamma value for SVM default is 0.001
     # Output:
-    #         model, the trained model
+    #         svm.SVC, the trained model
     #         float, the training accuracy score
     classifier = svm.SVC(C=1, gamma=0.001)
     classifier.fit(X_train, y_train)
@@ -37,7 +37,7 @@ def run_pipeline():
     # Predict and evaluate the model
     # Task: Create a function, evaluate(), with the ff specs
     # Inputs:
-    #         clf (svm.SVC), a trained SVM classifier
+    #         classifier (svm.SVC), a trained SVM classifier
     #         X_test (numpy.ndarray), input images to test
     #         y_test (numpy.ndarray), ground-truth labels
     # Output:
@@ -49,14 +49,12 @@ def run_pipeline():
     return train_score, test_score
 
 
-
 def refactored_pipeline():
     """You should import the refactored methods here"""
 
     # Step 1
     # You should put the `load` method here:
     # X_train, X_test, y_train, y_test = src.load()
-
 
     # Step 2
     # You should put the `train` method here:
