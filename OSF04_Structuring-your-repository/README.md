@@ -3,7 +3,12 @@
 [![Powerpoint Badge](https://img.shields.io/badge/view-powerpoint-orange.svg)](https://docs.google.com/presentation/d/1KscwY9yoPCuN6jKXE2VN2s1tyalssFXJZkHj_ql7r4I/edit?usp=sharing)
 
 In this workshop, we will learn about a good open-source repository structure
-by creating a simple command-line application. 
+by creating a simple command-line application. By the end of this course,
+you'll learn the following:
+
+* Structure an open-source repository
+* Create a command-line application using [click](https://github.com/pallets/click)
+* Learn how to extract features using [geomancer](https://github.com/thinkingmachines/geomancer)
 
 The app that we'll build allows us to extract geospatial features given a set
 of coordinates. It is based on
