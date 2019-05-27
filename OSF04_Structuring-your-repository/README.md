@@ -15,11 +15,30 @@ of coordinates. It is based on
 [Geomancer](https://github.com/thinkingmachines/geomancer), an open-source tool
 we built ourselves!
 
-Our goal looks like this:
+
+## Task 
+
+Our task is to create a command-line (CLI) application, `geogra.py`, that
+allows us to extract geospatial-related features given a set of coordinates. It
+involves two subcommands, `extract-features` and `get-distance`.  The slides
+will walk through the first one, while the latter is left as an exercise. 
+
+The CLI looks like this:
 
 ```shell
-python geogra.py <input> <output> --spellbook=path/to/spellbook.json
+python geogra.py extract-features           \
+        <input> <output>                    \
+        --spellbook=path/to/spellbook.json
+```
 
+It is also possible to update `setup.py` to install the command-line app into
+your system, allowing us to call the application right away without explicitly
+invoking the python interpreter:
+
+```shell
+geogra.py extract-features                 \
+        <input> <output>                   \
+        --spellbook=path/to/spellbook.json
 ```
 
 ## Requirements
@@ -36,7 +55,7 @@ Then run `make requirements.txt` to generate the full pinned versions of the dep
 
 Setup your development environment by running the following commands:
 
-```
+```shell
 make venv
 make build
 ```
@@ -56,15 +75,17 @@ wget -O data/source.sqlite --show-progress https://storage.googleapis.com/tm-geo
 
 ## Usage
 
-Extracting features given a SpellBook:
+You can use the command-line applications implemented here for your needs. If
+you want extract features given a SpellBook, then execute the following
+command:
 
-```
+```shell
 python geogra.py extract-features <input> <output> --spellbook=path/to/spellbook.json
 ```
 
-Getting the distance given a set of POIs
+To get the distance given a set of POIs
 
-```
+```shell
 python geogra.py get-distance                           \
         <input> <output>                                \
         mall supermarket embassy                        \
