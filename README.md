@@ -21,6 +21,13 @@ can better guide you with the materials. On the other hand, it is possible to
 follow these tutorials on your own, we're making sure that each lesson is
 self-contained and appropriate to the declared skill-level.
 
+
+#### Difficulty
+
+- :octocat: : perfect for beginners with no prior software development experience.
+- :octocat: :octocat: : requires completion of atleast one OSF session.
+- :octocat: :octocat: :octocat: : requires completion of atleast two OSF sessions.
+
 ## Topics
 
 | # | Topic                                    | Description                                                                                                                                                                                                  | Difficulty                    |
