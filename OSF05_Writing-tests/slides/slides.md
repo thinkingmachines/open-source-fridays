@@ -153,7 +153,7 @@ def test_add_return_val():
 ```python
 # logic_gates.py
 
-def not(x,y):
+def not(x):
     return not x 
 ```
 :::
@@ -184,7 +184,7 @@ def test_return_not_type():
 ```python
 # logic_gates.py
 
-def not(x,y):
+def not(x):
     return not x 
 ```
 :::
