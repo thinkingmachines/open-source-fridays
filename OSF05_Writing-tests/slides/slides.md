@@ -199,8 +199,8 @@ from logic_gates import not
 
 @pytest.mark.parametrize("x", 
     [0, 1, True, False])
-def test_return_not_type():
-    not_0 = not(0)
+def test_return_not_type(x):
+    not_0 = not(x)
     assert isinstance(not_0, bool)
 ```
 :::
