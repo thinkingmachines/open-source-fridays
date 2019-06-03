@@ -32,6 +32,8 @@ chunks that are easier to maintain and debug.
 
 You might have a large Python function that does something like this:
 
+![A large Python function](unmodularized_process.png)
+
 
 # Modularizing your code
 
@@ -47,6 +49,8 @@ Ask yourself the ff questions when modularizing your code:
 
 
 # Modularizing your code
+
+![Transform the large function into composable chunks](modularized_process.png)
 
 
 # Modularizing your code
@@ -66,9 +70,11 @@ model.add(Dense(units=10, activation="softmax"))
 
 # Task # 1: Modularizing your code
 
-For today, we will **modularize and test** a basic machine learning pipeline.
+For today, we will **modularize and test a basic machine learning pipeline**.
 
 * The pipeline involves classifying handwritten digits using Support-Vector Machines (SVM):
+
+![ML Pipeline for the exercise](ml_pipeline.png){ width=330px }
 
 # Task # 1: Modularizing your code
 
@@ -247,3 +253,14 @@ Finally, create an integration test file, `test_pipeline.py` and test the follow
 - that the training and test accuracy checks out (will there be cases that the latter is greater than the former?)
 
 *What other things should we test? Feel free to do more!*
+
+# Final Notes
+
+Some notes on testing and modularization:
+
+- Compose and test in moderation
+  + If your tests are too stringent, it might be difficult to refactor:
+      * Sometimes it's fine to return a `list` or a `tuple`, no need to test that
+  + In some cases, there's no need to test on values that your dependencies (the things you `import`, returns). 
+      * The method `numpy.random.choice()` will always return a `numpy.ndarray`, no need to test that. Instead, test the business logic that uses this function.
+- Modularization and composability is like an artform. Many people have different opinions on how to do it well. Just make sure that your most important use-cases are tested.
