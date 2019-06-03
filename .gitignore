@@ -128,3 +128,6 @@ dmypy.json
 
 # Notebooks
 *.ipynb
+
+# Slide outputs
+*.pdf
