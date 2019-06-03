@@ -10,11 +10,9 @@ development. It aims to skill you up as an open-source contributor!
 ## Target Audience
 
 This is intended for someone who wants to get started in open-source or learn
-basic software engineering skills as they work in TM. 
-
-We do not expect any software engineering experience (although they will
-certainly help) as we go through most of these workshops, so feel free to join
-along!
+basic software engineering skills as they work in TM. We do not expect any
+software engineering experience (although they will certainly help) as we go
+through most of these workshops, so feel free to join along!
 
 ## Recommended Approach
 
