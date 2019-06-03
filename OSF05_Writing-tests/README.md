@@ -2,6 +2,8 @@
 
 [![Powerpoint Badge](https://img.shields.io/badge/view-powerpoint-orange.svg)](https://docs.google.com/presentation/d/1TLZnPdJw4sxQ9dOPmJ3I7nDxDawp8e_Bk7hfh6F8jg8/edit?usp=sharing)
 
+**Difficulty:** :octocat: :octocat: :octocat:
+
 In this workshop, we will learn about the importance of testing your code to
 ensure that there are no bugs or unexpected errors when running them. By the
 end of this course, you'll learn the following:
