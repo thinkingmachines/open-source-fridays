@@ -38,6 +38,36 @@ self-contained and appropriate to the declared skill-level.
 | 4 | [Structuring your repository](https://github.com/thinkingmachines/open-source-fridays/tree/master/OSF04_Structuring-your-repository)              | If you have an idea in mind (automating workflows, simplifying scripts, etc.), then we'd recommend you to follow through this workshop so that you can structure your repository effectively!                | :octocat: :octocat:           |
 | 5 | [Writing tests and modularizing your code](https://github.com/thinkingmachines/open-source-fridays/tree/master/OSF05_Writing-tests) | Writing tests to check the code you've written is integral to maintaining open-source code. In this workshop, you'll learn how to make your code "test-friendly", and write tests to check if they're right! | :octocat: :octocat: :octocat: |
 
+## Compiling the slides 
+
+All slides are generated straight from Markdown using
+[Pandoc](https://pandoc.org/) and [LaTeX
+Beamer](https://www.overleaf.com/learn/latex/Beamer) with the [metropolis
+theme](https://ctan.org/pkg/beamertheme-metropolis). You can always view the
+generated slides from the links above, but if you wish to **compile from
+source**, you'd need the following dependencies:
+
+- LaTeX installation (Texlive for Linux, MikTeX for Windows, MacTex for MaxOS)
+- FiraSans font (if not installed, the default Computer Modern Sans is used)
+- Pandoc 2.7.1 and above
+
+To compile all slides, simply run the following:
+
+```shell
+make build-all
+```
+
+You can opt to compile a single slide by passing its title (i.e., directory name):
+
+```shell
+make build TITLE=OSF05_Writing-tests
+```
+
+If you wish to make a new slide deck, simply pass the deck title again:
+
+```shell
+make new TITLE=OSF0X_My-new-title
+```
 
 ## Others
 
