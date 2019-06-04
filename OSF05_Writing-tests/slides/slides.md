@@ -35,7 +35,7 @@ You might have a large Python function that does something like this:
 ![A large Python function](unmodularized_process.png)
 
 
-# Modularizing your code
+---
 
 Ask yourself the ff questions when modularizing your code:
 
@@ -48,12 +48,12 @@ Ask yourself the ff questions when modularizing your code:
 *What other questions can we ask?*
 
 
-# Modularizing your code
+---
 
 ![Transform the large function into composable chunks](modularized_process.png)
 
 
-# Modularizing your code
+---
 
 Good examples of libraries with nice API design:
 
@@ -76,7 +76,7 @@ For today, we will **modularize and test a basic machine learning pipeline**.
 
 ![ML Pipeline for the exercise](ml_pipeline.png){ width=330px }
 
-# Task # 1: Modularizing your code
+---
 
 ## Instructions
 
