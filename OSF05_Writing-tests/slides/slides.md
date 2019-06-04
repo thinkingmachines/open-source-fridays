@@ -82,15 +82,15 @@ For today, we will **modularize and test a basic machine learning pipeline**.
 
 1. Clone the `open-source-fridays` repo and go to the `OSF05_Writing-tests` directory.
 
-```shell
-$ git clone git@github.com:thinkingmachines/geomancer.git
-```
+    ```shell
+    $ git clone git@github.com:thinkingmachines/geomancer.git
+    ```
 
 2. Create a copy of `pipeline-problem.py` into `pipeline.py`:
 
-```shell
-$ cp pipeline-problem.py pipeline.py
-```
+    ```shell
+    $ cp pipeline-problem.py pipeline.py
+    ```
 
 3. Follow the refactoring instructions inside a file called `src.py`.
 
