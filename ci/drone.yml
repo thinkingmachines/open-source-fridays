@@ -6,12 +6,22 @@ steps:
   image: gcr.io/tm-opensource/osf
   commands:
       - make build-all
-- name: release
+- name: release-branch
   image: plugins/gcs
   settings:
       source: decks 
-      target: tm-osf/decks/
+      target: tm-osf/decks/${DRONE_BRANCH}/
       acl: allUsers:READER
+      ignore: .gitkeep
+      token:
+          from_secret: gcs_token
+- name: release-latest
+  image: plugins/gcs
+  settings:
+      source: decks 
+      target: tm-osf/decks/latest/
+      acl: allUsers:READER
+      ignore: .gitkeep
       token:
           from_secret: gcs_token
   when:
