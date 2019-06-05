@@ -1,5 +1,7 @@
 # TM Open-Source Fridays 
 
+[![Build Status](https://cloud.drone.io/api/badges/thinkingmachines/open-source-fridays/status.svg)](https://cloud.drone.io/thinkingmachines/open-source-fridays)
+
 This repository contains all materials for OSF!
 
 **What is OSF?** [Open-source fridays](https://opensourcefriday.com/) is a
