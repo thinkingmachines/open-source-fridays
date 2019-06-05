@@ -1,6 +1,6 @@
 # OSF05: Writing tests and modularizing your code
 
-[![Powerpoint Badge](https://img.shields.io/badge/view-powerpoint-orange.svg)](https://docs.google.com/presentation/d/1TLZnPdJw4sxQ9dOPmJ3I7nDxDawp8e_Bk7hfh6F8jg8/edit?usp=sharing)
+[![Powerpoint Badge](https://img.shields.io/badge/view-deck-blue.svg)](https://storage.googleapis.com/tm-osf/decks/latest/OSF05_Writing-tests.pdf)
 
 **Difficulty:** :octocat: :octocat: :octocat:
 

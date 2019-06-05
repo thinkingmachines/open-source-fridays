@@ -1,6 +1,6 @@
 # OSF04: Structuring your repository
 
-[![Powerpoint Badge](https://img.shields.io/badge/view-powerpoint-orange.svg)](https://docs.google.com/presentation/d/1KscwY9yoPCuN6jKXE2VN2s1tyalssFXJZkHj_ql7r4I/edit?usp=sharing)
+[![Powerpoint Badge](https://img.shields.io/badge/view-deck-blue.svg)](https://storage.googleapis.com/tm-osf/decks/latest/OSF04_Structuring-your-repository.pdf)
 
 **Difficulty:** :octocat: :octocat:
 
