@@ -32,6 +32,9 @@ build-all:  ## Build all OSF slide decks
 build:  ## Build a specific slide deck
 	ci/build.sh 2 ${TITLE}
 
+watch-all:  ## Build and watch for changes
+	watchmedo shell-command -p '*.md' -c 'ci/build.sh 1' -R -D .
+
 new:  ## Make a new slide
 	mkdir -p ${TITLE}/slides
 	touch ${TITLE}/slides/${TITLE}.md
