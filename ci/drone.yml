@@ -1,0 +1,22 @@
+kind: pipeline
+name: build-slides
+
+steps:
+- name: compile
+  image: gcr.io/tm-opensource/osf
+  commands:
+      - make build-all
+- name: release
+  image: plugins/gcs
+  settings:
+      source: decks 
+      target: tm-osf/decks/
+      acl: allUsers:READER
+      token:
+          from_secret: gcs_token
+  when:
+      branch:
+          - master
+      event:
+          exclude:
+              - pull_request
