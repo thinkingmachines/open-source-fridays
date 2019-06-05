@@ -21,11 +21,34 @@ trap exit_CTRL QUIT
 trap exit_CTRL SIGINT
 
 main() {
-    for deck in $(ls OSF*/slides/*.md);
+    if [ $1 -eq 1 ]; then
+        compile_all
+    elif [ $1 -eq 2 ]; then
+        compile $2
+    else
+        err "Unknown parameter"
+    fi
+}
+
+# The compile_all() function looks for all markdown files and builds them
+compile_all() {
+    for deck in $(find OSF*/slides -type f -name '*.md');
     do
         info "Compiling $deck...";
-        pandoc -t beamer $deck -o ${deck%.*}.pdf -H preamble.tex --resource-path=$(dirname $deck)/;
+        pandoc --to beamer --output ${deck%.*}.pdf \
+               --include-in-header preamble.tex    \
+               --resource-path=$(dirname $deck)/   \
+               $deck;
     done
+}
+
+
+# The compile() function builds a single slide
+compile() {
+    pandoc --to beamer --output $1/slides/$1.pdf \
+           --include-in-header preamble.tex      \
+           --resource-path=$1/slides/            \
+           $1/slides/$1.md
 }
 
 
@@ -90,7 +113,7 @@ debug () {
 exit_EXIT() {
   info "Script ended! Cleanup & Exit."
   cleanup
-  exit 1
+  exit 0
 }
 
 exit_CTRL() {
@@ -132,7 +155,7 @@ while getopts ":hd" o; do
     esac
 done
 
-main
+main $1 $2
 trap exit_EXIT EXIT
 trap exit_CTRL QUIT
 trap exit_CTRL SIGINT
