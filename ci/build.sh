@@ -35,13 +35,12 @@ compile_all() {
     for deck in $(find OSF*/slides -type f -name '*.md');
     do
         info "Compiling $deck...";
-        pandoc --to beamer --output ${deck%.*}.pdf \
+        pandoc --to beamer --output decks/$(basename $deck .md).pdf \
                --include-in-header preamble.tex    \
                --resource-path=$(dirname $deck)/   \
                $deck;
     done
 }
-
 
 # The compile() function builds a single slide
 compile() {
