@@ -115,7 +115,51 @@ steps:
 
 # Task
 
-- Fb-scraper
-- PizaPy
-- BertSum
-- BQUP
+Our **main goal** is to run a continuous integration job in Drone for a TM repo!
+
+1. Group yourselves into two or three!
+    - One person will write the drone config
+    - Another person (max 2) will work on writing some tests (atleast 2)
+2. Choose one from the following projects
+    - Fb-scraper (https://github.com/thinkingmachines/fb-scraper)
+    - PizaPy (https://github.com/thinkingmachines/PizaPy)
+    - BQUP (https://github.com/thinkingmachines/bqup)
+
+---
+
+3. Go to `drone.thinkingmachin.es` and enable the repository that you chose
+
+![](drone-tm.png)
+
+---
+
+4. Create a Drone file in the root of your repository
+
+As a starter, you can do something like this:
+
+```yaml
+kind: pipeline
+name: run-tests
+
+steps:
+- name: test
+  image: python:3.6-stretch
+  commands:
+  - pip install -r requirements-dev.txt
+  - pytest tests/
+```
+
+Then add steps as needed. Check the [Drone CI
+documentation](https://docs.drone.io/) for more info!
+
+--- 
+
+5. Then, commit and push away!
+
+```shell
+$ git commit -m "Add .drone.yml"
+$ git push origin master 
+```
+
+6. A continuous integration workflow that just install requirements is not
+   really useful. It would be nice if we can add some tests!
