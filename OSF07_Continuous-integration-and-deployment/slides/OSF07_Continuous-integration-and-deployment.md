@@ -27,7 +27,6 @@ Continuous integration is the process of putting software into production:
 ---
 
 ![](00_badge.png)
-![](01_badge.png)
 
 
 ---
